@@ -1,0 +1,8 @@
+#!/bin/bash
+function capturer {
+    echo "capture du signal"
+    exit 1
+}
+trap capturer HUP INT TERM
+sleep 200
+echo "Arrêt"
